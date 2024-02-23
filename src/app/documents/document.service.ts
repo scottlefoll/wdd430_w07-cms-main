@@ -72,6 +72,8 @@ export class DocumentService{
     }
     this.documents.splice(pos, 1);
     this.documentChangedEvent.next(this.documents.slice());
+    alert('deleteDocument using this.documentChangedEvent.next in document.service.');
+    console.log('deleteDocument using this.documentChangedEvent.next in document.service.');
   }
 
   sortDocuments(documents: Document[]): Document[] {

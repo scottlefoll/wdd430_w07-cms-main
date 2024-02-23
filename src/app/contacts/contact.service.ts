@@ -71,6 +71,8 @@ export class ContactService{
       return;
     }
     this.contacts.splice(pos, 1);
+    alert('deleteContact using this.contactChangedEvent.next in contact.service.');
+    console.log('deleteContact using this.contactChangedEvent.next in contact.service.');
     this.contactChangedEvent.next(this.contacts.slice());
   }
 
